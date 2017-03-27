@@ -81,6 +81,16 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
             }
         });
 
+        Button login_link = (Button) findViewById(R.id.login_link);
+        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                attemptLogin();
+                //Intent I = new Intent(RegistrationActivity.this, LoginActivity.class);
+                //startActivity( I );
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }

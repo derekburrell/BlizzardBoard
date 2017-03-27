@@ -19,23 +19,5 @@
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
         <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f1434a1b1dce6af83b8b02e6d94c707c11f963b0/classes.dex" />
     </item>
-    <item
-        is-multidex="true"
-        jar="/Users/derekburrell/.android/build-cache/5caaae7695808b2a668fade972493be149e0509b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_27aaf3e89a7de2eb848a637457147c5034cbf04d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/derekburrell/.android/build-cache/dd934f7c28ec54ffd46dd61fc6a1ba3a45cfb625/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6afccdbaf3df6a49d085f48f71301496f0e0ea84/classes.dex" />
-    </item>
 
 </items>
