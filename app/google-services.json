@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "708847888304",
+    "firebase_url": "https://ethereal-atlas-162315.firebaseio.com",
+    "project_id": "ethereal-atlas-162315",
+    "storage_bucket": "ethereal-atlas-162315.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708847888304:android:12e312573815447e",
+        "android_client_info": {
+          "package_name": "com.team6.teamrocket.blizzardboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708847888304-tjm5n8598dj5ss026i8muntgg5da9v4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.team6.teamrocket.blizzardboard",
+            "certificate_hash": "37d10469f319f6ce817f418a19ba2f94506573d4"
+          }
+        },
+        {
+          "client_id": "708847888304-dc80rd716sjk9foogi5i1l2ai4he5lov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXrUw9CyRi2EQ_t0sBw8xV-4UwLh_53Tw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708847888304-dc80rd716sjk9foogi5i1l2ai4he5lov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
