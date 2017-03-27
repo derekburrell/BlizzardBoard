@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-7.8.0_4ff778c3676d8dcf554669865fbc77482a6ba296/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-7.8.0_e6ca2af92552ef623ac3a0dc37307acd16bbf469/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-7.8.0_60d8355f8e3ad03ec0afa4c455319efa77264260/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-7.8.0_a052c5de4f0cf81cd826f7e6f98af08b9d06b9d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="2e24e5f1b11170163028277de63f709e42525db4">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-7.8.0_d63e49e107797ed8338c28b35fbcdfd3dd3287b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7f80566435b0431df5a03a8f5b81898321ec96ad">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_605b943989ab67323085e2a49cf54e624dbec6bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_7329420bcbda93ac47b7b5772485f8ff7542c7ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-7.8.0_d67da3ea16183a097c9f45405f5490a444c8c6d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-22.2.0_bf7ef5b61571bfb289159b8d2c8d0f64370582dc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-7.8.0_574f61f3b04bcfb3aa1ecbf83fa68939d7d7b20c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-7.8.0_36efe55896c214fc95c6c953c298d7fe38f8e7cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-7.8.0_122df313aa2bf8cdf3de70296ac38c239de73624/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.0_fd5f4ef8e598829a794bb029661290d7f307a593/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.8.0_a6aab871c14e9d739dd9be5ee861e046c225b0d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-7.8.0_6766e26562053c2a79ca9224bf868ed1b2e763ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_00cdcf6e3f575fdd141140c6d0cce2a665fc1d58/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_f546d23519bc7919c7f99abc26582207c7dce3e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.clans-fab-1.6.4_2baa80d3d547e56a2f3fcc8840c3cf1151ab989f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-7.8.0_daa477c806fe5f39069bd3dad6abcbe6e0abf3f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-7.8.0_af5f70e72a3ccd81650baf6fea3a632c962baab6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appstate-7.8.0_6faefc0da0878f5721a6eac985bc1809a6f50770/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-7.8.0_9fa7da9cb3d582f1f4f265f22bcca830a6fdaa24/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_8756303ffbfa5d2a9852a11d086e1c24a4f0d898/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-7.8.0_8704c68fee07b5f9f84deb583b629004784310a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-7.8.0_f3712d855bd4a2586dacafe0771ec911c02549e9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-7.8.0_489ddfb14c760b38bb3541a142f2839e012dc609/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="79c33396a140daedfdb1979680e0c9193dea6ebb">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f1434a1b1dce6af83b8b02e6d94c707c11f963b0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-7.8.0_ae05e3708e27b2a9de356f5ad7e91a1ef8cf109a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-7.8.0_870e36d2600104c05f4b80ba185ac904b601ca23/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.8.0_a0c39ad91132001bea700f026f49f5abdad9df21/classes.dex" />
+    </item>
+
+</items>
