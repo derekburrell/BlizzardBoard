@@ -131,6 +131,8 @@ public class Navigation extends ActionBarActivity
                 break;
             case 3:
                 mTitle = getString(R.string.myPosts);
+                Intent I1 = new Intent(Navigation.this, Profile.class);
+                startActivity( I1);
                 break;
             case 4:
                 mTitle = getString(R.string.messages);
