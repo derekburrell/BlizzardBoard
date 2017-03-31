@@ -33,6 +33,10 @@
             android:name=".Profile"
             android:label="@string/title_activity_profile" >
         </activity>
+        <activity
+            android:name=".Navigation"
+            android:label="Navigation" >
+        </activity>
     </application>
 
 </manifest>

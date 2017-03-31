@@ -14,7 +14,9 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,6 +26,15 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,10 +63,31 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
     private View mProgressView;
     private View mLoginFormView;
 
+    private static final String TAG = "EmailPassword";
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                } else {
+                    // User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                }
+                // ...
+            }
+        };
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -77,7 +109,23 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+
+                //User login credentials
+                String email = mEmailView.getText().toString();
+                String password = mPasswordView.getText().toString();
+
+                //Attempt to add a valid user and log them in
+                createAccount(email, password);
+                signIn(email, password);
+
+                // Show a progress spinner, and kick off a background task to
+                // perform the user login attempt.
+                showProgress(true);
+                mAuthTask = new UserLoginTask(email, password);
+
+                //After successful login, bring user to navigation screen
+                startActivity(new Intent(RegistrationActivity.this, Navigation.class));
+                mAuthTask.execute((Void) null);
             }
         });
 
@@ -85,6 +133,7 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
         mLoginLinkButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent I = new Intent(RegistrationActivity.this, LoginActivity.class);
                 startActivity( I );
             }
@@ -94,19 +143,81 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
         mProgressView = findViewById(R.id.login_progress);
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
+
     private void populateAutoComplete() {
         getLoaderManager().initLoader(0, null, this);
     }
 
+    /**
+     * Create a firebase user account.
+     * @param email - The email fo the new user.
+     * @param password - The new user's password
+     */
+    private void createAccount(String email, String password) {
+        Log.d(TAG, "createAccount:" + email);
+        if (!attemptLogin()) {
+            return;
+        }
+
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+                    }
+                });
+    }
+
+    /**
+     * Sign the user in.
+     * @param email - The user's email.
+     * @param password - The user's login password
+     */
+    private void signIn(String email, String password) {
+        Log.d(TAG, "signIn:" + email);
+
+        // [START sign_in_with_email]
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
+
+                        // If sign in fails, display a message to the user. If sign in succeeds
+                        // the auth state listener will be notified and logic to handle the
+                        // signed in user can be handled in the listener.
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "signInWithEmail:failed", task.getException());
+                        }
+                    }
+                });
+    }
 
     /**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
+     *
+     * @return If the user account is valid.
      */
-    public void attemptLogin() {
+    public boolean attemptLogin() {
+
+        //could not authorize task
         if (mAuthTask != null) {
-            return;
+            return false;
         }
 
         // Reset errors.
@@ -142,15 +253,8 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
             // There was an error; don't attempt login and focus the first
             // form field with an error.
             focusView.requestFocus();
-        } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            Intent I = new Intent(RegistrationActivity.this, Navigation.class);
-            startActivity( I );
-            mAuthTask.execute((Void) null);
         }
+        return !cancel; //successful login is the opposite of cancel
     }
 
     private boolean isEmailValid(String email) {

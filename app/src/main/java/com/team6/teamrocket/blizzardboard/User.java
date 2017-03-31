@@ -18,6 +18,12 @@ public class User
     private boolean loggedIn;	 //flag for if the user is currently logged in and active
 
     // class constructor
+    User(){
+        setName(name);
+        setEmail(email);
+        setPassword(password);
+    }
+
     User(String name, String email, String password)
     {
         setName(name);

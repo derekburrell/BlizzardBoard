@@ -3,6 +3,7 @@ package com.team6.teamrocket.blizzardboard;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,18 +24,19 @@ import android.widget.TextView;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class Navigation extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private static final String TAG = "EmailPassword";
 
     FloatingActionMenu materialDesignFAM;
     FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4, floatingActionButton5, floatingActionButton6;
-
-
-
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -50,6 +53,22 @@ public class Navigation extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                } else {
+                    // User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                }
+                // ...
+            }
+        };
+
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -58,12 +77,6 @@ public class Navigation extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
-
-
-
-
-
 
         materialDesignFAM = (FloatingActionMenu) findViewById(R.id.social_floating_menu);
         floatingActionButton1 = (FloatingActionButton) findViewById(R.id.floating_facebook);
@@ -99,17 +112,6 @@ public class Navigation extends ActionBarActivity
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
     }
 
     @Override
@@ -145,6 +147,7 @@ public class Navigation extends ActionBarActivity
                 break;
             case 7:
                 mTitle = getString(R.string.logout);
+                mAuth.signOut();
                 Intent I = new Intent(Navigation.this, LoginActivity.class);
                 startActivity( I );
                 break;
@@ -181,7 +184,7 @@ public class Navigation extends ActionBarActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.search_button) {
-            System.out.println( "Someting hapendgerswdf" );
+            System.out.println( "Something Happened" );
             return true;
         }
 
@@ -226,10 +229,7 @@ public class Navigation extends ActionBarActivity
             ((Navigation) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
-
-
     }
-
 
     public static Intent getOpenFacebookIntent(Context context) {
 
@@ -257,8 +257,17 @@ public class Navigation extends ActionBarActivity
         }
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
 
-
-
-
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
 }
