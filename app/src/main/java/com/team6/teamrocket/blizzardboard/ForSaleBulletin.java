@@ -7,14 +7,18 @@ package com.team6.teamrocket.blizzardboard;
  * 		  that are for sale. Its parent class is Bulletin.
  */
 
+import com.google.firebase.database.Exclude;
+
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ForSaleBulletin extends Bulletin{
 	
-	private ArrayList<File> pictures = new ArrayList<File>();	//picture of the item
-	private String condition = new String();					//the condition of the item
-	private double price = 0;									//the price of the item
+	protected ArrayList<File> pictures = new ArrayList<File>();	//picture of the item
+	protected String condition = new String();					//the condition of the item
+	protected double price = 0;									//the price of the item
 	
 	/**
 	 * Helps construct the ForSaleBulletin object.
@@ -75,5 +79,27 @@ public class ForSaleBulletin extends Bulletin{
 	public String toSQL() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	/**
+	 * Converts the bulletin into a map.
+	 * @return The bulletin in map form.
+	 */
+	@Override
+	public Map<String, Object> toMap() {
+		HashMap<String, Object> result = new HashMap<>();
+		result.put("Title",title);
+		result.put("Description",description);
+		result.put("Tags",tags);
+		result.put("Date Created",dateCreated);
+		result.put("Date Expires",dateExpires);
+		result.put("Author",author);
+		result.put("Rating",rating);
+		result.put("Flags", flags);
+		result.put("Address", address);
+		result.put("Pictures",pictures);
+		result.put("Condition",condition);
+		result.put("Price",price);
+		return result;
 	}
 }

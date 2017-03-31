@@ -1,6 +1,10 @@
 package com.team6.teamrocket.blizzardboard;
 
+import com.google.firebase.database.Exclude;
+
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -8,16 +12,16 @@ import java.util.Date;
  */
 public abstract class Bulletin implements Bulletinable {
 
-    private String title;
-    private String subject;
-    private String description;
-    private String[] tags;
-    private Date dateCreated;
-    private Date dateExpires;
-    private String author;
-    private int rating;
-    private DoublyLinkedList flags;
-    private Address address;
+    protected String title;
+    protected String subject;
+    protected String description;
+    protected String[] tags;
+    protected Date dateCreated;
+    protected Date dateExpires;
+    protected String author;
+    protected int rating;
+    protected DoublyLinkedList flags;
+    protected Address address;
     
     public Bulletin() {
         rating = 0;
@@ -126,5 +130,23 @@ public abstract class Bulletin implements Bulletinable {
 
     @Override
     public void setLocation(Address address) { this.address = address; }
-    
+
+    /**
+     * Converts the bulletin into a map.
+     * @return The bulletin in map form.
+     */
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("Title",title);
+        result.put("Description",description);
+        result.put("Tags",tags);
+        result.put("Date Created",dateCreated);
+        result.put("Date Expires",dateExpires);
+        result.put("Author",author);
+        result.put("Rating",rating);
+        result.put("Flags", flags);
+        result.put("Address", address);
+        return result;
+    }
 }

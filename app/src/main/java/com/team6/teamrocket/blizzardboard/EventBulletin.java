@@ -7,9 +7,13 @@ package com.team6.teamrocket.blizzardboard;
  * @date 2017/03/14
  */
 
+import com.google.firebase.database.Exclude;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EventBulletin extends Bulletin {
 
@@ -95,5 +99,28 @@ public class EventBulletin extends Bulletin {
 	public String toSQL() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	/**
+	 * Converts the bulletin into a map.
+	 * @return The bulletin in map form.
+	 */
+	@Exclude
+	public Map<String, Object> toMap() {
+		HashMap<String, Object> result = new HashMap<>();
+		result.put("Title",title);
+		result.put("Description",description);
+		result.put("Tags",tags);
+		result.put("Date Created",dateCreated);
+		result.put("Date Expires",dateExpires);
+		result.put("Author",author);
+		result.put("Rating",rating);
+		result.put("Flags", flags);
+		result.put("Address", address);
+		result.put("Pictures",pictures);
+		result.put("Event Date", eventDate);
+		result.put("Location",location);
+		result.put("Host",host);
+		return result;
 	}
 }

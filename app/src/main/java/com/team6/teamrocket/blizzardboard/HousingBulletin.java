@@ -10,13 +10,15 @@ package com.team6.teamrocket.blizzardboard;
 
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HousingBulletin extends ForSaleBulletin{
-		
-	private Address address = new Address();						//the address of the living unit
-	private int roommates = 0;										//number of roommates permitted
-	private Date start = new Date();								//start day for living in unit
-	private Date end = new Date();									//end day for living in unit
+
+	private Address address = new Address();					//the address of the living unit
+	private int roommates = 0;									//number of roommates permitted
+	private Date start = new Date();							//start day for living in unit
+	private Date end = new Date();								//end day for living in unit
 	private ArrayList<String> utilities = new ArrayList<String>();	//utilities that come with unit
 	private ArrayList<String> appliances = new ArrayList<String>();	//appliances that come with unit
 	
@@ -118,5 +120,32 @@ public class HousingBulletin extends ForSaleBulletin{
 	public String toSQL() {
 		// TODO Auto-generated method stub
 		return null;
-	}	
+	}
+
+	/**
+	 * Converts the bulletin into a map.
+	 * @return The bulletin in map form.
+	 */
+	@Override
+	public Map<String, Object> toMap() {
+		HashMap<String, Object> result = new HashMap<>();
+		result.put("Title",title);
+		result.put("Description",description);
+		result.put("Tags",tags);
+		result.put("Date Created",dateCreated);
+		result.put("Date Expires",dateExpires);
+		result.put("Author",author);
+		result.put("Rating",rating);
+		result.put("Flags", flags);
+		result.put("Address", address);
+		result.put("Pictures",pictures);
+		result.put("Condition",condition);
+		result.put("Price",price);
+		result.put("Roommates",roommates);
+		result.put("Start", start);
+		result.put("End",end);
+		result.put("Utilities",utilities);
+		result.put("Appliances",appliances);
+		return result;
+	}
 }

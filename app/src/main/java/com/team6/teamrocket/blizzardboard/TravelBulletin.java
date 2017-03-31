@@ -8,6 +8,8 @@ package com.team6.teamrocket.blizzardboard;
  */
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TravelBulletin extends Bulletin {
 	
@@ -92,4 +94,25 @@ public class TravelBulletin extends Bulletin {
 		return null;
 	}
 
+	/**
+	 * Converts the bulletin into a map.
+	 * @return The bulletin in map form.
+	 */
+	@Override
+	public Map<String, Object> toMap(){
+		HashMap<String, Object> result = new HashMap<>();
+		result.put("Title",title);
+		result.put("Description",description);
+		result.put("Tags",tags);
+		result.put("Date Created",dateCreated);
+		result.put("Date Expires",dateExpires);
+		result.put("Author",author);
+		result.put("Rating",rating);
+		result.put("Flags", flags);
+		result.put("Address", address);
+		result.put("Ride Date",rideDate);
+		result.put("Destination",destination);
+		result.put("Number of Seats",numSeats);
+		return result;
+	}
 }
