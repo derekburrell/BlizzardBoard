@@ -116,16 +116,6 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
 
                 //Attempt to add a valid user and log them in
                 createAccount(email, password);
-                signIn(email, password);
-
-                // Show a progress spinner, and kick off a background task to
-                // perform the user login attempt.
-                showProgress(true);
-                mAuthTask = new UserLoginTask(email, password);
-
-                //After successful login, bring user to navigation screen
-                startActivity(new Intent(RegistrationActivity.this, Navigation.class));
-                mAuthTask.execute((Void) null);
             }
         });
 
@@ -166,17 +156,28 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
      * @param email - The email fo the new user.
      * @param password - The new user's password
      */
-    private void createAccount(String email, String password) {
+    private void createAccount(final String email, final String password) {
         Log.d(TAG, "createAccount:" + email);
         if (!attemptLogin()) {
             return;
         }
 
+        //create teh user account with their email and password
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+
+                        // Show a progress spinner, and kick off a background task to
+                        // perform the user login attempt.
+                        signIn(email, password);
+                        showProgress(true);
+                        mAuthTask = new UserLoginTask(email, password);
+
+                        //After successful login, bring user to navigation screen
+                        startActivity(new Intent(RegistrationActivity.this, Navigation.class));
+                        mAuthTask.execute((Void) null);
                     }
                 });
     }
