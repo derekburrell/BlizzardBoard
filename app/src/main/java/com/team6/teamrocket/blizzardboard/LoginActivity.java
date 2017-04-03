@@ -173,14 +173,33 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             focusView.requestFocus();
         }
         else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
-            FirebaseUser user = mAuth.getCurrentUser();
-            Intent I = new Intent(LoginActivity.this, Navigation.class);
-            startActivity( I );
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            // If sign in fails, display a message to the user. If sign in succeeds
+                            // the auth state listener will be notified and logic to handle the
+                            // signed in user can be handled in the listener.
+                            if (task.isSuccessful()) {
+
+                                // Show a progress spinner, and kick off a background task to
+                                // perform the user login attempt.
+                                showProgress(true);
+                                mAuthTask = new UserLoginTask(mEmailView.getText().toString(), mPasswordView.getText().toString());
+                                mAuthTask.execute((Void) null);
+                                startActivity(new Intent(LoginActivity.this, Navigation.class));
+                            }
+
+                            //password was not correct, display error message
+                            else{
+                                mPasswordView.setError("Incorrect Password");
+                                View focusViewVerifyAccount = mPasswordView;
+                                focusViewVerifyAccount.requestFocus();
+                                focusViewVerifyAccount.requestFocus();
+                            }
+                        }
+                    });
         }
     }
 

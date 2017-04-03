@@ -60,6 +60,7 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
+    private EditText mPasswordConfirmView;
     private View mProgressView;
     private View mLoginFormView;
 
@@ -85,7 +86,6 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
-                // ...
             }
         };
 
@@ -94,6 +94,7 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
         populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordConfirmView = (EditText) findViewById(R.id.confirmpassword);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -234,8 +235,14 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
 
         // Check for a valid password, if the user entered one.
         if (password.equals( "" ) || !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
+            cancel = true;
+        }
+
+        // Passwords do not match
+        else if(!mPasswordConfirmView.getText().toString().equals(password)){
+            mPasswordConfirmView.setError("Confirmation password does not match");
+            focusView = mPasswordConfirmView;
             cancel = true;
         }
 
@@ -266,11 +273,12 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         boolean isValid = true;
-        isValid = isValid && !password.equals( password.toLowerCase() );    //Contains lowercase
-        isValid = isValid && !password.equals( password.toUpperCase() );    //Contains Uppercase
-        isValid = isValid && password.matches( ".*\\d.*" );                 //Contains Numbers
-        isValid = isValid && !password.matches( "[a-zA-Z0-9 ]*" );          //Contains Special Character
-        isValid = isValid && password.length() > 6;
+
+        if(!(isValid = isValid && password.length() > 6)){mPasswordView.setError("Password must be at least 6 characters");}             //At least six characters long
+        else if(!(isValid = isValid && !password.equals( password.toLowerCase()))){mPasswordView.setError("Missing uppercase letter");}  //Missing lowercase
+        else if(!(isValid = isValid && !password.equals( password.toUpperCase()))){mPasswordView.setError("Missing lowercase letter");}  //Missing Uppercase
+        else if(!(isValid = isValid && password.matches( ".*\\d.*" ))){mPasswordView.setError("Missing number");}                        //MissingNumbers
+        else if(!(isValid = isValid && !password.matches( "[a-zA-Z0-9 ]*" ))){mPasswordView.setError("Missing special character");}      //Missing Special Character
         return isValid;
     }
 
