@@ -18,4 +18,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="hint_search">Search</string>
+
+    <string-array name="types">
+        <item>For Sale</item>
+        <item>Housing</item>
+        <item>Travel</item>
+        <item>Event</item>
+    </string-array>
 </resources>

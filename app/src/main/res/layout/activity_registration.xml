@@ -47,6 +47,7 @@
         android:id="@+id/login_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@null"
         android:text="Already have an account?" />
 
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"

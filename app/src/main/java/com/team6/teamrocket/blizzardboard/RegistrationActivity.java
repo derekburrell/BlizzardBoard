@@ -274,7 +274,7 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
         //TODO: Replace this with your own logic
         boolean isValid = true;
 
-        if(!(isValid = isValid && password.length() > 6)){mPasswordView.setError("Password must be at least 6 characters");}             //At least six characters long
+        if(!(isValid = isValid && password.length() >= 6)){mPasswordView.setError("Password must be at least 6 characters");}             //At least six characters long
         else if(!(isValid = isValid && !password.equals( password.toLowerCase()))){mPasswordView.setError("Missing uppercase letter");}  //Missing lowercase
         else if(!(isValid = isValid && !password.equals( password.toUpperCase()))){mPasswordView.setError("Missing lowercase letter");}  //Missing Uppercase
         else if(!(isValid = isValid && password.matches( ".*\\d.*" ))){mPasswordView.setError("Missing number");}                        //MissingNumbers
