@@ -36,6 +36,13 @@
         android:layout_marginTop="16dp" android:text="@string/action_sign_in"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/forgot_pw_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="@string/forgot_pw" />
+
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
         android:layout_height="match_parent">
 
