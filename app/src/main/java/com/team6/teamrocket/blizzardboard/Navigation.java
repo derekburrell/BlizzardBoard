@@ -53,11 +53,11 @@ public class Navigation extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
-        if (FirebaseAuth.getInstance().getCurrentUser() == null ) {
+        if ( FirebaseAuth.getInstance().getCurrentUser() == null ) {
             //If user is not signed in, goto signin.
             Intent signIn = new Intent( Navigation.this, LoginActivity.class );
             this.startActivity( signIn );
-            return;
+            this.finish();
         }
 
         mAuth = FirebaseAuth.getInstance();

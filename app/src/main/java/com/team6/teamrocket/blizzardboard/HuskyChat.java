@@ -52,6 +52,7 @@ public class HuskyChat extends AppCompatActivity {
             //If user is not signed in, goto signin.
             Intent signIn = new Intent( HuskyChat.this, LoginActivity.class );
             this.startActivity( signIn );
+            this.finish();
         }
         else {
             //Else display chat.

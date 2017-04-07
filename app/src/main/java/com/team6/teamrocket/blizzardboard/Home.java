@@ -49,12 +49,13 @@ public class Home extends AppCompatActivity {
             //If user is not signed in, goto signin.
             Intent signIn = new Intent( Home.this, LoginActivity.class );
             this.startActivity( signIn );
+            this.finish();
         }
         else {
             //Else display bulletins.
             displayBulletins();
         }
-
+jcg
         FloatingActionButton fab = (FloatingActionButton) findViewById( R.id.fab );
 
         fab.setOnClickListener( new View.OnClickListener() {
