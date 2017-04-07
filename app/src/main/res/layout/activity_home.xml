@@ -19,7 +19,7 @@
         android:dividerHeight="16dp"
         android:divider="@android:color/transparent"
         android:id="@+id/list_of_bulletins"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp" />
 
     <com.github.clans.fab.FloatingActionButton
         android:id="@+id/fab"
