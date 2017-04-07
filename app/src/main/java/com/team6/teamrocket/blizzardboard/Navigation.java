@@ -138,6 +138,8 @@ public class Navigation extends ActionBarActivity
                 break;
             case 4:
                 mTitle = getString(R.string.messages);
+                Intent chat = new Intent( Navigation.this, HuskyChat.class );
+                startActivity( chat );
                 break;
             case 5:
                 mTitle = getString(R.string.calender);
