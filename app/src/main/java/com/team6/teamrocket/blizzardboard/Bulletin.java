@@ -16,8 +16,8 @@ public abstract class Bulletin implements Bulletinable {
     protected String subject;
     protected String description;
     protected String[] tags;
-    protected Date dateCreated;
-    protected Date dateExpires;
+    protected long dateCreated;
+    protected long dateExpires;
     protected String author;
     protected int rating;
     protected DoublyLinkedList flags;
@@ -26,6 +26,7 @@ public abstract class Bulletin implements Bulletinable {
     public Bulletin() {
         rating = 0;
         flags = new DoublyLinkedList();
+        dateCreated = new Date().getTime();
     }
     
     @Override
@@ -74,22 +75,22 @@ public abstract class Bulletin implements Bulletinable {
     }
 
     @Override
-    public Date getDate() {
+    public long getDate() {
         return dateCreated;
     }
 
     @Override
-    public void setDate(Date date) {
+    public void setDate(long date) {
         this.dateCreated = date;
     }
 
     @Override
-    public Date getExpDate() {
+    public long getExpDate() {
         return dateExpires;
     }
 
     @Override
-    public void setExpDate(Date date) {
+    public void setExpDate(long date) {
         this.dateExpires = date;
     }
 

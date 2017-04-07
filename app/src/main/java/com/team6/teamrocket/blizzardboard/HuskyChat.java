@@ -67,6 +67,10 @@ public class HuskyChat extends AppCompatActivity {
             public void onClick( View view ) {
                 EditText input = (EditText) findViewById( R.id.input );
 
+                if ( input.getText().toString().equals( "" ) ) {
+                    return;
+                }
+
                 // Read the input field and push a new instance
                 // of ChatMessage to the Firebase database
                 FirebaseDatabase.getInstance()

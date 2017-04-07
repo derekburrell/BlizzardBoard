@@ -2,6 +2,7 @@
     <string name="app_name">BlizzardBoard</string>
     <string name="title_activity_board">Board</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_home">Board</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Search</string>
     <string name="title_activity_navigation">Navigation</string>

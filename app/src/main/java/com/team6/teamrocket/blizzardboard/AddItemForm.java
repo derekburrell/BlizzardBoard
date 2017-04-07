@@ -27,26 +27,30 @@ public class AddItemForm extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //post a bulletin to Firebase
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference postRef = database.getReference("Bulletins");
-
                 //grab info from text fields
                 mTitleView = (EditText) findViewById(R.id.titleText);
                 mDescriptionView = (EditText) findViewById(R.id.descriptionText);
                 String title = mTitleView.getText().toString();
                 String desc = mDescriptionView.getText().toString();
 
+                if ( title.equals("") || desc.equals("") ) {
+                    startActivity( new Intent(AddItemForm.this, Home.class ));
+                    return;
+                }
+
+                //post a bulletin to Firebase
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference postRef = database.getReference( "BulletinsV2" );
+
                 //create bulletin and post it
-                Bulletin bulletin = new EventBulletin();
-                bulletin.setTitle(title);
-                bulletin.setAuthor(FirebaseAuth.getInstance().getCurrentUser().getEmail());
-                bulletin.setDesc(desc);
+                String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+                HBBulletin bulletin = new HBBulletin( title, email, desc );
+
                 DatabaseReference bullRef = postRef.push();
-                bullRef.setValue(bulletin.toMap());
+                bullRef.setValue( bulletin );
 
                 //go back to the navigation screen
-                startActivity(new Intent(AddItemForm.this, Navigation.class));
+                startActivity( new Intent(AddItemForm.this, Home.class ));
             }
         });
     }

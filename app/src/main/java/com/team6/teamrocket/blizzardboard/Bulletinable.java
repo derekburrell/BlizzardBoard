@@ -81,25 +81,25 @@ public interface Bulletinable {
      * Gets the date the post was made.
      * @return the date of posting.
      */
-    public Date getDate();
+    public long getDate();
     
     /**
      * Sets the date the post was made.
      * @param date the new date of posting.
      */
-    public void setDate( Date date );
+    public void setDate( long date );
     
     /**
      * Gets the expiration date of the post.
      * @return the expiration date.
      */
-    public Date getExpDate();
+    public long getExpDate();
     
     /**
      * Sets the expiration date of the post.
      * @param date the new expiration date.
      */
-    public void setExpDate( Date date );
+    public void setExpDate( long date );
     
     /**
      * Gets the author of the post.
