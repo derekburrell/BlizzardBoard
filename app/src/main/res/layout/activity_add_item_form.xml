@@ -14,11 +14,11 @@
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView3"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_alignParentEnd="true" />
+        android:inputType="textCapSentences" />
 
     <Button
         android:id="@+id/submit_button"
@@ -32,12 +32,12 @@
         android:id="@+id/descriptionText"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView4"
         android:ems="10"
-        android:inputType="textMultiLine"
         android:gravity="top"
-        android:layout_alignParentEnd="true" />
+        android:inputType="textCapSentences|textMultiLine" />
 
     <Spinner
         android:id="@+id/subject"
@@ -53,11 +53,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:text="Title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView4"
