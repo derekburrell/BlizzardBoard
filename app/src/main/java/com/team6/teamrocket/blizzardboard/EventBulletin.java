@@ -27,7 +27,7 @@ public class EventBulletin extends Bulletin {
 		super();
 		EventBulletinConstructor(eventDate, location, host);
 	}
-	
+
 	public EventBulletin(Date eventDate, Address address, String host){
 		super();
 		EventBulletinConstructor(eventDate, location, host);

@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,12 +21,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.firebase.ui.database.FirebaseListAdapter;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Navigation extends ActionBarActivity
@@ -35,8 +39,8 @@ public class Navigation extends ActionBarActivity
     private FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = "EmailPassword";
 
-    FloatingActionMenu materialDesignFAM;
-    FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4, floatingActionButton5, floatingActionButton6;
+    //FloatingActionMenu materialDesignFAM;
+    //FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3, floatingActionButton4, floatingActionButton5, floatingActionButton6;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -52,6 +56,13 @@ public class Navigation extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
+        if ( FirebaseAuth.getInstance().getCurrentUser() == null ) {
+            //If user is not signed in, goto signin.
+            Intent signIn = new Intent( Navigation.this, LoginActivity.class );
+            this.startActivity( signIn );
+            this.finish();
+        }
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -78,6 +89,7 @@ public class Navigation extends ActionBarActivity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
+        /*
         materialDesignFAM = (FloatingActionMenu) findViewById(R.id.social_floating_menu);
         floatingActionButton1 = (FloatingActionButton) findViewById(R.id.floating_facebook);
         floatingActionButton2 = (FloatingActionButton) findViewById(R.id.floating_twitter);
@@ -112,6 +124,7 @@ public class Navigation extends ActionBarActivity
 
             }
         });
+        */
     }
 
     @Override
@@ -124,34 +137,46 @@ public class Navigation extends ActionBarActivity
     }
 
     public void onSectionAttached(int number) {
+
+        FragmentManager fragmentManager = this.getSupportFragmentManager();
+
         switch (number) {
             case 1:
                 mTitle = getString(R.string.home);
+                fragmentManager.beginTransaction()
+                        .replace( R.id.container, new HomeFragment() )
+                        .commit();
                 break;
             case 2:
                 mTitle = getString(R.string.categories);
+                fragmentManager.beginTransaction()
+                        .replace( R.id.container, new Fragment404() )
+                        .commit();
                 break;
             case 3:
                 mTitle = getString(R.string.myPosts);
-                Intent I1 = new Intent(Navigation.this, Profile.class);
-                startActivity( I1);
+                fragmentManager.beginTransaction()
+                        .replace( R.id.container, new MyPostsFragment() )
+                        .commit();
                 break;
             case 4:
                 mTitle = getString(R.string.messages);
-                Intent chat = new Intent( Navigation.this, HuskyChat.class );
-                startActivity( chat );
+                fragmentManager.beginTransaction()
+                        .replace( R.id.container, new HuskyChatFragment() )
+                        .commit();
                 break;
             case 5:
-                mTitle = getString(R.string.calender);
+                mTitle = getString(R.string.preferences);
+                fragmentManager.beginTransaction()
+                        .replace( R.id.container, new Fragment404() )
+                        .commit();
                 break;
             case 6:
-                mTitle = getString(R.string.preferences);
-                break;
-            case 7:
                 mTitle = getString(R.string.logout);
                 mAuth.signOut();
                 Intent I = new Intent(Navigation.this, LoginActivity.class);
                 startActivity( I );
+                this.finish();
                 break;
         }
     }

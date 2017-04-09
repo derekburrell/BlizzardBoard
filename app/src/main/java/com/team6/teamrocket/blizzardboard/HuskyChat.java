@@ -19,7 +19,7 @@ public class HuskyChat extends AppCompatActivity {
     private FirebaseListAdapter<ChatMessage> adapter;
 
     private void displayChatMessages() {
-        ListView listOfMessages = (ListView)findViewById(R.id.list_of_messages);
+        ListView listOfMessages = (ListView) findViewById(R.id.list_of_messages);
 
         adapter = new FirebaseListAdapter<ChatMessage>(this, ChatMessage.class,
                 R.layout.message, FirebaseDatabase.getInstance().getReference( "HCMessages" )) {
@@ -48,10 +48,11 @@ public class HuskyChat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_husky_chat);
 
-        if (FirebaseAuth.getInstance().getCurrentUser() == null ) {
+        if ( FirebaseAuth.getInstance().getCurrentUser() == null ) {
             //If user is not signed in, goto signin.
             Intent signIn = new Intent( HuskyChat.this, LoginActivity.class );
             this.startActivity( signIn );
+            this.finish();
         }
         else {
             //Else display chat.
@@ -66,6 +67,10 @@ public class HuskyChat extends AppCompatActivity {
             @Override
             public void onClick( View view ) {
                 EditText input = (EditText) findViewById( R.id.input );
+
+                if ( input.getText().toString().equals( "" ) ) {
+                    return;
+                }
 
                 // Read the input field and push a new instance
                 // of ChatMessage to the Firebase database

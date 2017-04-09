@@ -12,6 +12,7 @@
     <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <!--
         <com.github.clans.fab.FloatingActionMenu
             android:id="@+id/social_floating_menu"
             android:layout_width="match_parent"
@@ -73,7 +74,7 @@
                 android:src="@mipmap/form"
                 fab:fab_size="mini" />
 
-      </com.github.clans.fab.FloatingActionMenu>
+      </com.github.clans.fab.FloatingActionMenu> -->
     </FrameLayout>
 
     <!-- android:layout_gravity="start" tells DrawerLayout to treat

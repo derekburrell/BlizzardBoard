@@ -16,11 +16,6 @@
             android:name=".RegistrationActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateVisible">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -34,8 +29,16 @@
             android:label="@string/title_activity_profile" />
         <activity
             android:name=".Navigation"
-            android:label="Navigation" />
-        <activity android:name=".HuskyChat"></activity>
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HuskyChat" />
+        <activity android:name=".Home">
+        </activity>
     </application>
 
 </manifest>

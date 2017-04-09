@@ -3,14 +3,11 @@
     <string name="title_activity_board">Board</string>
     <string name="title_activity_profile">Profile</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Search</string>
-    <string name="title_activity_navigation">Navigation</string>
 
     <string name="home">Home</string>
     <string name="categories">Categories</string>
     <string name="myPosts">My Posts</string>
     <string name="messages">Husky Chat</string>
-    <string name="calender">Calender</string>
     <string name="preferences">Preferences</string>
     <string name="logout">Logout</string>
 
