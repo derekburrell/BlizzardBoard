@@ -124,7 +124,6 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
         mLoginLinkButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent I = new Intent(RegistrationActivity.this, LoginActivity.class);
                 startActivity( I );
             }
