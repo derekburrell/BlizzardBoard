@@ -8,6 +8,7 @@ import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,6 +17,8 @@ import com.github.clans.fab.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.net.MalformedURLException;
+
 /**
  *
  * @author Jacob Gould
@@ -23,6 +26,35 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MyPostsFragment extends Fragment {
 
     private View profleView;
+    private FirebaseListAdapter<HBBulletin> adapter;
+
+    private void displayBulletins() {
+        ListView listOfBulletins = (ListView) getActivity().findViewById( R.id.list_of_bulletins );
+        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        String user = email.substring( 0, email.indexOf( '@' ) );
+        adapter = new FirebaseListAdapter<HBBulletin>(getActivity(), HBBulletin.class,
+                R.layout.bulletin, FirebaseDatabase.getInstance().getReference( "BulletinsV2" ).orderByChild("user").equalTo(user)) {
+            @Override
+            protected void populateView( View v, HBBulletin model, int position ) {
+                // Get references to the views of bulletin.xml
+                TextView title = (TextView) v.findViewById( R.id.bulletin_title );
+                TextView user = (TextView) v.findViewById( R.id.bulletin_user );
+                TextView date = (TextView) v.findViewById( R.id.bulletin_date );
+                TextView description = (TextView) v.findViewById( R.id.bulletin_desciption );
+                TextView subject = (TextView) v.findViewById( R.id.bulletin_subject );
+
+                // Set their text
+                title.setText( model.getTitle() );
+                user.setText( model.getUser() );
+                date.setText( DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getPostTime()) );
+                description.setText( model.getDescription() );
+                subject.setText( model.getSubject() );
+                //v.setBackgroundColor(  );
+            }
+        };
+
+        listOfBulletins.setAdapter( adapter );
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,8 +64,8 @@ public class MyPostsFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
 
+        super.onActivityCreated(savedInstanceState);
         if ( FirebaseAuth.getInstance().getCurrentUser() == null ) {
             //If user is not signed in, goto signin.
             Intent signIn = new Intent( getActivity(), LoginActivity.class );
@@ -42,7 +74,17 @@ public class MyPostsFragment extends Fragment {
         }
         else {
             //Else display bulletins.
-            //displayBulletins();
+            displayBulletins();
         }
+
+        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        String user = email.substring( 0, email.indexOf( '@' ) );
+
+        TextView userName = (TextView) this.getActivity().findViewById(R.id.curUser);
+        userName.setText(user);
+
+        ImageView iconImage = (ImageView) this.getActivity().findViewById(R.id.userIcon);
+            iconImage.setImageResource(R.mipmap.icon_350226_640);
+
     }
 }
