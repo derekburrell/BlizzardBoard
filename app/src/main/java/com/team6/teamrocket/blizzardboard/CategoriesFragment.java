@@ -17,6 +17,8 @@ import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Date;
+
 /**
  *
  * @author Jordan Kielytka
@@ -45,9 +47,21 @@ public class CategoriesFragment extends Fragment {
                 // Set their text
                 title.setText( model.getTitle() );
                 user.setText( model.getUser() );
-                date.setText( DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getPostTime()) );
                 description.setText( model.getDescription() );
                 subject.setText( model.getSubject() );
+
+                // Set the date text
+                String day = DateFormat.format( "dd-MM-yyyy", model.getPostTime() ).toString();
+                String today = DateFormat.format( "dd-MM-yyyy", new Date().getTime() ).toString();
+                if ( day == null ) {
+
+                }
+                else if ( day.equals( today ) ) {  //Don't display date if it was posted today
+                    date.setText( DateFormat.format("HH:mm:ss", model.getPostTime()) );
+                }
+                else {
+                    date.setText( DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getPostTime()) );
+                }
 
                 // Set background color
                 String subj = model.getSubject();

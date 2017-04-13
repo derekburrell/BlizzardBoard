@@ -17,6 +17,8 @@ import com.github.clans.fab.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Date;
+
 /**
  *
  * @author Jacob Gould
@@ -42,9 +44,18 @@ public class HuskyChatFragment extends Fragment {
                 messageText.setText(model.getMessage());
                 messageUser.setText(model.getUser());
 
-                // Format the date before showing it
-                messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",
-                        model.getTime()));
+                // Set the date text
+                String day = DateFormat.format( "dd-MM-yyyy", model.getTime() ).toString();
+                String today = DateFormat.format( "dd-MM-yyyy", new Date().getTime() ).toString();
+                if ( day == null ) {
+
+                }
+                else if ( day.equals( today ) ) {  //Don't display date if it was posted today
+                    messageTime.setText( DateFormat.format("HH:mm:ss", model.getTime()) );
+                }
+                else {
+                    messageTime.setText( DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getTime()) );
+                }
             }
         };
 

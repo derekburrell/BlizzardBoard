@@ -38,6 +38,24 @@ public class BulletinActivity extends AppCompatActivity {
             description.setText( getIntent().getStringExtra( "postDescription" ) );
             subject.setText( getIntent().getStringExtra( "postSubject" ) );
 
+            // Set background color
+            String subj = subject.getText().toString();
+            if ( subj == null ) {
+                //do nothing
+            }
+            else if ( subj.equals( "Event" ) ) {
+                this.findViewById( R.id.sticky_note ).setBackgroundColor( HomeFragment.event );
+            }
+            else if ( subj.equals( "Travel" ) ) {
+                this.findViewById( R.id.sticky_note ).setBackgroundColor( HomeFragment.travel );
+            }
+            else if ( subj.equals( "Housing" ) ) {
+                this.findViewById( R.id.sticky_note ).setBackgroundColor( HomeFragment.housing );
+            }
+            else if ( subj.equals( "For Sale" ) ) {
+                this.findViewById( R.id.sticky_note ).setBackgroundColor( HomeFragment.forSale );
+            }
+
             user.setOnClickListener( new View.OnClickListener() {
 
                 @Override

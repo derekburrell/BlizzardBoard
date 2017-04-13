@@ -166,12 +166,6 @@ public class Navigation extends ActionBarActivity
                         .commit();
                 break;
             case 5:
-                mTitle = getString(R.string.preferences);
-                fragmentManager.beginTransaction()
-                        .replace( R.id.container, new Fragment404() )
-                        .commit();
-                break;
-            case 6:
                 mTitle = getString(R.string.logout);
                 mAuth.signOut();
                 Intent I = new Intent(Navigation.this, LoginActivity.class);
