@@ -1,12 +1,16 @@
-## Welcome to GitHub Pages
+## User Guide
 
-You can use the [editor on GitHub](https://github.com/derekburrell/BlizzardBoard/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+BlizzardBoard is a mobile app that allows you to post bulletins and view posts made by others within the Michigan Tech community.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The app must be run on an Android device or emulator.
 
-### Markdown
+### Registration
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Once the app is launched, you will be prompted to create a new account.
+
+If you already an account, you may select the appropriate link and log in using your existing credentials.
+
+Registration requires a valid email dress on the `mtu.edu` domain.
 
 ```markdown
 Syntax highlighted code block
