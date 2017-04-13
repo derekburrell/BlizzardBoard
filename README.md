@@ -56,36 +56,36 @@ Once the post is pulbished, it can be seen at the top of the Home feed.
 
 ### Navigation
 
-Select the ← button to navigate the app by selecting between Home, Categories, My Posts, Husky Chat, Preferences, and Logout Panes.
+Select the ← button to navigate the app by selecting between Home, Categories, My Posts, Husky Chat, Preferences, and Logout panes.
 
 <img src="./images/navigation.png" width="250">
 
 ### Categories
 
-```markdown
-Syntax highlighted code block
+This section allows the user to filter posts by category so that only bulletins of a specific type are displayed.
 
-# Header 1
-## Header 2
-### Header 3
+<img src="./images/categories.png" width="250">
 
-- Bulleted
-- List
+### My Posts
 
-1. Numbered
-2. List
+This section allows the user to view only posts made by him/herself personally.
 
-**Bold** and _Italic_ and `Code` text
+<img src="./images/my_posts.png" width="250">
 
-[Link](url) and ![Image](src)
-```
+### Husky Chat
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+This page is a public chat room for open communication between all app users. Select the **Input** field and type out a message to be sent.
 
-### Jekyll Themes
+<img src="./images/message.png" width="250">
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/derekburrell/BlizzardBoard/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Click the ✉ icon to send. Your new message now appears at the bottom of a chronologically-ordered discussion feed.
 
-### Support or Contact
+<img src="./images/message_sent.png" width="250">
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Preferences
+
+This feature will be implemented at a later date.
+
+### Logout
+
+Selecting this option from the navigation pane signs the user out and returns to the Login screen.
