@@ -1,4 +1,4 @@
-## User Guide
+## User Guide v2.0
 
 BlizzardBoard is a mobile app that allows you to post bulletins and browse posts made by others within the Michigan Tech community.
 
