@@ -46,7 +46,7 @@ Each post has a title, a description, and a category.
 
 <img src="./images/home.png" width="250">
 
-Click the ⊕ button to create a new post. Give the post a title, select a category (For Sale, Housing, Travel, or Event), and type out a description for your post, and hit **SUBMIT** when finished to display it on the bulletin board.
+Click the ⊕ button to create a new post. Give the post a title, select a category (For Sale, Housing, Travel, or Event), type out a description for your post and hit **SUBMIT** when finished to display it on the bulletin board.
 
 <img src="./images/new_post.png" width="250">
 
