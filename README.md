@@ -46,7 +46,7 @@ Each post has a title, a description, and a category.
 
 <img src="./images/home.png" width="250">
 
-Click the **⊕** button to create a new post. Give the post a title, select a category (For Sale, Housing, Travel, or Event), and type out a description for your post, and hit **SUBMIT** when finished to display it on the bulletin board.
+Click the ⊕ button to create a new post. Give the post a title, select a category (For Sale, Housing, Travel, or Event), and type out a description for your post, and hit **SUBMIT** when finished to display it on the bulletin board.
 
 <img src="./images/new_post.png" width="250">
 
@@ -56,7 +56,7 @@ Once the post is pulbished, it can be seen at the top of the Home feed.
 
 ### Navigation
 
-Select the **←** button to navigate the app by selecting between Home, Categories, My Posts, Husky Chat, Preferences, and Logout panes.
+Select the ← button to navigate the app by selecting between Home, Categories, My Posts, Husky Chat, Preferences, and Logout panes.
 
 <img src="./images/navigation.png" width="250">
 
@@ -78,7 +78,7 @@ This page is a public chat room for open communication between all app users. Se
 
 <img src="./images/message.png" width="250">
 
-Click the **✉** icon to send. Your new message now appears at the bottom of a chronologically-ordered discussion feed.
+Click the ✉ icon to send. Your new message now appears at the bottom of a chronologically-ordered discussion feed.
 
 <img src="./images/message_sent.png" width="250">
 
