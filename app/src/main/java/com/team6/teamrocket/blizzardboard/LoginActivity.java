@@ -197,8 +197,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                             // If sign in fails, display a message to the user. If sign in succeeds
                             // the auth state listener will be notified and logic to handle the
                             // signed in user can be handled in the listener.
-                            if (task.isSuccessful()) {
-
+                            if (!mAuth.getCurrentUser().isEmailVerified()) {
+                                mAuth.signOut();
+                                mEmailView.setError(getString(R.string.error_unverified_user));
+                                mEmailView.requestFocus();
+                            } else if (task.isSuccessful()) {
                                 // Show a progress spinner, and kick off a background task to
                                 // perform the user login attempt.
                                 showProgress(true);

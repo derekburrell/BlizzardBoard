@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
@@ -211,7 +212,7 @@ public class Navigation extends ActionBarActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.search_button) {
-            System.out.println( "Something Happened" );
+            System.out.println( SearchView.OnQueryTextListener.class );
             return true;
         }
 

@@ -175,9 +175,13 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
                         showProgress(true);
                         mAuthTask = new UserLoginTask(email, password);
 
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        user.sendEmailVerification();
+
                         //After successful login, bring user to navigation screen
-                        startActivity(new Intent(RegistrationActivity.this, Navigation.class));
+                        startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
                         mAuthTask.execute((Void) null);
+
                     }
                 });
     }

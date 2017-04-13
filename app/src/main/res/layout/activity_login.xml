@@ -8,16 +8,6 @@
 
     <!-- Login progress -->
 
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:text="New User Registration"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="#009788"
-        android:textStyle="bold" />
-
     <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_marginBottom="8dp" android:visibility="gone" />
@@ -52,6 +42,13 @@
         android:layout_height="wrap_content"
         android:background="@null"
         android:text="@string/forgot_pw" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="New User?" />
 
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
         android:layout_height="match_parent">

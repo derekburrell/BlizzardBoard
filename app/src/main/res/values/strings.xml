@@ -12,7 +12,7 @@
     <string name="logout">Logout</string>
 
     <string name="forgot_pw">Forgot Password?</string>
-    <string name="pw_reset_sent">An email containing a password reset link has been sent.</string>
+    <string name="pw_reset_sent">An email containing a password reset link has been sent</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
