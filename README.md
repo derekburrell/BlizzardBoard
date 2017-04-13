@@ -12,7 +12,7 @@ If you already an account, you may select the appropriate link and log in using 
 
 Registration requires a valid email dress on the `mtu.edu` domain.
 
-![Image](images/registration.png =10x)
+<img src="images/registration.png" width="250">
 
 ```markdown
 Syntax highlighted code block
