@@ -38,7 +38,7 @@ public class AddItemForm extends AppCompatActivity {
                 String subject = mSubjectView.getSelectedItem().toString();
 
                 if ( title.equals("") || desc.equals("") ) {
-                    startActivity( new Intent(AddItemForm.this, Home.class ));
+                    startActivity( new Intent(AddItemForm.this, Navigation.class ));
                     return;
                 }
 
@@ -60,7 +60,7 @@ public class AddItemForm extends AppCompatActivity {
                 mDescriptionView.setText( "" );
 
                 //go back to the navigation screen
-                startActivity( new Intent(AddItemForm.this, Home.class ));
+                startActivity( new Intent(AddItemForm.this, Navigation.class ));
 
             }
         });
