@@ -36,6 +36,12 @@ Click the link to choose a new password for your user account.
 
 <img src="./images/password_link.png" width="250">
 
+### Home
+
+The app lands on the Home page once the user is logged in. Here, posts made by all app users can be viewed in reverse-chronological order. Each post has a title, description, and category.
+
+<img src="./images/home.png" width="250">
+
 ```markdown
 Syntax highlighted code block
 
