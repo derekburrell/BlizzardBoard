@@ -22,6 +22,20 @@ Click the link to confirm your email address and activate your new account.
 
 <img src="./images/verification_link.png" width="250">
 
+### Login
+
+From the login page, enter your **MTU Email** and **Password** and select **SIGN IN** to begin using the app.
+
+<img src="./images/login.png" width="250">
+
+If you do not know your password, you may enter only your **MTU Email** and select **FORGOT PASSWORD?** to receive an email with a password reset link.
+
+<img src="./images/forgot_password.png" width="250"> <img src="./images/password_email.png" width="250">
+
+Click the link to choose a new password for your user account.
+
+<img src="./images/password_link.png" width="250">
+
 ```markdown
 Syntax highlighted code block
 
