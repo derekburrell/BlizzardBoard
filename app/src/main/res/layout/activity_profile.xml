@@ -1,8 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/profile_detail_container"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    tools:context="com.team6.teamrocket.blizzardboard.Profile"
-    tools:ignore="MergeRootFrame" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/cork_board2"
+    tools:context="com.team6.teamrocket.blizzardboard.ProfileActivity"
+    tools:ignore="MergeRootFrame">
 
     <ImageView
         android:id="@+id/userIcon"
@@ -18,12 +21,12 @@
         android:id="@+id/curUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/userIcon"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal|top"
         android:text="Medium Text"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="24sp"
-        android:layout_below="@+id/userIcon"
-        android:layout_centerHorizontal="true" />
+        android:textSize="24sp" />
 
     <ListView
         android:id="@+id/list_of_bulletins"

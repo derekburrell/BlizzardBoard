@@ -1,5 +1,6 @@
 package com.team6.teamrocket.blizzardboard;
 
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
@@ -40,6 +41,11 @@ public class HomeFragment extends Fragment {
     private View homeView;
     private FirebaseListAdapter<HBBulletin> adapter;
 
+    public static final int event = Color.parseColor( "#f0abff" ),
+                travel = Color.parseColor( "#00e6ff" ),
+                housing = Color.parseColor( "#59ff00" ),
+                forSale = Color.parseColor( "#ffea00" );
+
     private void displayBulletins() {
         ListView listOfBulletins = (ListView) getActivity().findViewById( R.id.list_of_bulletins );
 
@@ -60,7 +66,47 @@ public class HomeFragment extends Fragment {
                 date.setText( DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getPostTime()) );
                 description.setText( model.getDescription() );
                 subject.setText( model.getSubject() );
-                //v.setBackgroundColor(  );
+
+                // Set background color
+                String subj = model.getSubject();
+                if ( subj == null ) {
+                    //do nothing
+                }
+                else if ( subj.equals( "Event" ) ) {
+                    v.setBackgroundColor( HomeFragment.event );
+                }
+                else if ( subj.equals( "Travel" ) ) {
+                    v.setBackgroundColor( HomeFragment.travel );
+                }
+                else if ( subj.equals( "Housing" ) ) {
+                    v.setBackgroundColor( HomeFragment.housing );
+                }
+                else if ( subj.equals( "For Sale" ) ) {
+                    v.setBackgroundColor( HomeFragment.forSale );
+                }
+
+                // Set click to open full page view of bulletin
+                v.setOnClickListener( new View.OnClickListener() {
+
+                    @Override
+                    public void onClick( View view ) {
+                        // Get references to the views of bulletin.xml
+                        TextView title = (TextView) view.findViewById( R.id.bulletin_title );
+                        TextView user = (TextView) view.findViewById( R.id.bulletin_user );
+                        TextView date = (TextView) view.findViewById( R.id.bulletin_date );
+                        TextView description = (TextView) view.findViewById( R.id.bulletin_desciption );
+                        TextView subject = (TextView) view.findViewById( R.id.bulletin_subject );
+
+                        Intent fullPage = new Intent( getActivity(), BulletinActivity.class );
+                        fullPage.putExtra( "postTitle", title.getText() );
+                        fullPage.putExtra( "postUser", user.getText() );
+                        fullPage.putExtra( "postDate", date.getText() );
+                        fullPage.putExtra( "postDescription", description.getText() );
+                        fullPage.putExtra( "postSubject", subject.getText() );
+                        startActivity( fullPage );
+                    }
+
+                });
             }
         };
 

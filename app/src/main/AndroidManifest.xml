@@ -15,15 +15,11 @@
         <activity
             android:name=".RegistrationActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustResize|stateVisible">
-        </activity>
+            android:windowSoftInputMode="adjustResize|stateVisible" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name" />
         <activity android:name=".AddItemForm" />
-        <activity
-            android:name=".Profile"
-            android:label="@string/title_activity_profile" />
         <activity
             android:name=".Navigation"
             android:label="@string/app_name">
@@ -32,6 +28,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".BulletinActivity"
+            android:label="Bulletin"/>
+        <activity android:name=".ProfileActivity"
+            android:label="Profile">
         </activity>
     </application>
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bulletin_head">#0f000000</color>
+    <color name="bulletin_for_sale">#ffea00</color>
+    <color name="bulletin_housing">#59ff00</color>
+    <color name="bulletin_travel">#00e6ff</color>
+    <color name="bulletin_event">#f0abff</color>
+</resources>
