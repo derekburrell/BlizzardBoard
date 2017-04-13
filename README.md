@@ -1,6 +1,6 @@
 ## User Guide
 
-BlizzardBoard is a mobile app that allows you to post bulletins and view posts made by others within the Michigan Tech community.
+BlizzardBoard is a mobile app that allows users to post bulletins and view posts made by others within the Michigan Tech community.
 
 The app must be run on an Android device or emulator.
 
