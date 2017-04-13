@@ -78,7 +78,7 @@ This page is a public chat room for open communication between all app users. Se
 
 <img src="./images/message.png" width="250">
 
-Click the ✉ icon to send. Your new message now appears at the bottom of a chronologically-ordered discussion feed.
+Click the ✉ icon to send. Your message now appears at the bottom of a chronologically-ordered discussion feed.
 
 <img src="./images/message_sent.png" width="250">
 
