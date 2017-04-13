@@ -6,13 +6,21 @@ The app must be run on an Android device or emulator.
 
 ### Registration
 
-Once the app is launched, you will be prompted to create a new account.
+Once the app is launched, you will be prompted to create a new account. If you already have an account, you may select the appropriate link and log in using your existing credentials.
 
-If you already an account, you may select the appropriate link and log in using your existing credentials.
+Registration requires an active email address on the `mtu.edu` domain.
 
-Registration requires a valid email dress on the `mtu.edu` domain.
+A valid password contains a minimum of six characters, including at least one lower-case letter, one upper-case letter, one number, and one special character (any non-letter/non-number).
 
 <img src="./images/registration.png" width="250">
+
+With the **MTU Email**, **Password**, and **Confirm Password** fields filled out, select **SEND VERIFICATION EMAIL** to receive a link for account activation by email. You will be redirected to the login page upon completion.
+
+<img src="./images/verification_email.png" width="250">
+
+Click the link to confirm your email address and activate your new account.
+
+<img src="./images/verification_link.png" width="250">
 
 ```markdown
 Syntax highlighted code block
