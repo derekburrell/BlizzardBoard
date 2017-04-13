@@ -30,7 +30,9 @@ From the login page, enter your **MTU Email** and **Password** and select **SIGN
 
 If you do not know your password, you may enter only your **MTU Email** and select **FORGOT PASSWORD?** to receive an email with a password reset link.
 
-<img src="./images/forgot_password.png" width="250"> <img src="./images/password_email.png" width="250">
+<img src="./images/forgot_password.png" width="250">
+
+<img src="./images/password_email.png" width="250">
 
 Click the link to choose a new password for your user account.
 
@@ -38,9 +40,27 @@ Click the link to choose a new password for your user account.
 
 ### Home
 
-The app lands on the Home page once the user is logged in. Here, posts made by all app users can be viewed in reverse-chronological order. Each post has a title, description, and category.
+The app lands on the Home page once the user is logged in. Here, posts made by all app users can be viewed in reverse-chronological order.
+
+Each post has a title, a description, and a category.
 
 <img src="./images/home.png" width="250">
+
+Click the ⊕ button to create a new post. Give the post a title, select a category (For Sale, Housing, Travel, or Event), and type out a description for your post, and hit **SUBMIT** when finished to display it on the bulletin board.
+
+<img src="./images/new_post.png" width="250">
+
+Once the post is pulbished, it can be seen at the top of the Home feed.
+
+<img src="./images/home_post.png" width="250">
+
+### Navigation
+
+Select the ← button to navigate the app by selecting between Home, Categories, My Posts, Husky Chat, Preferences, and Logout Panes.
+
+<img src="./images/navigation.png" width="250">
+
+### Categories
 
 ```markdown
 Syntax highlighted code block
