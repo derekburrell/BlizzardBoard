@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/category_detail_container"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="com.team6.teamrocket.blizzardboard.Categories"
+    tools:ignore="MergeRootFrame" >
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/types"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:id="@+id/list_of_bulletins"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="16dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/category_spinner"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

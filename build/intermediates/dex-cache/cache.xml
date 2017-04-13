@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Users\jkiel\Documents\GitHub\BlizzardBoard\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="432dcbf1c79d1fccc0d2a17424db7928ffcdbbbf">
-        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_605b943989ab67323085e2a49cf54e624dbec6bc/classes.dex" />
+        sha1="2ec57b55a44625c508e3ef05d4f68c9bbc812f4e">
+        <dex dex="C:\Users\jkiel\Documents\GitHub\BlizzardBoard\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_76dfa00bb9503c6d3db27dc292194995a6494532\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="C:\Users\jkiel\Documents\GitHub\BlizzardBoard\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/Users/derekburrell/Documents/BlizzardBoard/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f1434a1b1dce6af83b8b02e6d94c707c11f963b0/classes.dex" />
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\jkiel\Documents\GitHub\BlizzardBoard\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_0a7de67d5baba94fe4729678d7abb188e1fc6633\classes.dex" />
     </item>
 
 </items>

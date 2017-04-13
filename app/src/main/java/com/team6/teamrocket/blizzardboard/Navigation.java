@@ -11,7 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
@@ -151,7 +150,7 @@ public class Navigation extends ActionBarActivity
             case 2:
                 mTitle = getString(R.string.categories);
                 fragmentManager.beginTransaction()
-                        .replace( R.id.container, new Fragment404() )
+                        .replace( R.id.container, new CategoriesFragment() )
                         .commit();
                 break;
             case 3:
@@ -212,7 +211,7 @@ public class Navigation extends ActionBarActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.search_button) {
-            System.out.println( SearchView.OnQueryTextListener.class );
+            System.out.println( "Something Happened" );
             return true;
         }
 
