@@ -6,7 +6,6 @@ import java.util.Date;
  *
  * @author Jacob Gould
  */
-
 public class ChatMessage {
 
     private String message; //message text

@@ -6,7 +6,6 @@ import java.util.Date;
  *
  * @author Jacob Gould
  */
-
 public class HBBulletin {
 
     private String title;

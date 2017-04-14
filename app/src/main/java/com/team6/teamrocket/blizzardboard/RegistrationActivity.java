@@ -268,12 +268,12 @@ public class RegistrationActivity extends Activity implements LoaderCallbacks<Cu
         return !cancel; //successful login is the opposite of cancel
     }
 
-    private boolean isEmailValid(String email) {
+    public boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.endsWith("@mtu.edu");
+        return email.endsWith("@mtu.edu") && email.length() < 17;
     }
 
-    private boolean isPasswordValid(String password) {
+    public boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         boolean isValid = true;
 
